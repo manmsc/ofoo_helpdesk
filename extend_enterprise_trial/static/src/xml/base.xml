@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="web_enterprise.DatabaseExpirationPanel" t-inherit-mode="extension">
+        <xpath expr="//a[hasclass('oe_instance_buy')]" position="after" owl="1">
+            or <br/><a class="oe_trial_instance_extend" href="#" t-on-click.prevent="_onExtendTrial">extend trial period </a>
+            <p style="display: inline-block;">for
+                <input id="expiration_date" class="expiration_date" placeholder="30"
+                        type="number" min="1" max="365" required="required"
+                        style="background: none;display: inline-block;width: 50px;
+                               text-align: center;margin-left: 10px;border-left: none;
+                               border-top: none;border-right: none;"/>
+                days</p>
+        </xpath>
+    </t>
+
+</templates>
